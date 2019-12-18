@@ -1,0 +1,12 @@
+<h1>Books</h1>
+
+<%= form_tag "/books", method: "post" do %>
+  <input type="text" name="title" />
+  <input type="submit" name="Add a book">
+<% end %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li><%= book.title %></li>
+  <% end %>
+</ul>
