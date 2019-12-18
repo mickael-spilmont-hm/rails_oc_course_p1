@@ -1,2 +1,12 @@
 <h1><%= @book.title %></h1>
+
+<%= form_tag "/books/#{@book.id}", method: "patch" do %>
+  <input type="text" name="title" />
+  <input type="submit" value="Update book" />
+<% end %>
+
+<%= form_tag "/books/#{@book.id}", method: "delete" do %>
+  <input type="submit" value="Delete book" />
+<% end %>
+
 <p><a href="/books">Return to index</a></p>

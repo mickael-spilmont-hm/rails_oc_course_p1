@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 'books' => 'books#new'
 
   get 'books/:id' => 'books#show'
+  patch 'books/:id' =>'books#update'
 end
