@@ -3,8 +3,12 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
-  def create
+  def new
     Book.create title: params[:title]
     redirect_to "/books"
+  end
+
+  def show
+    @book = Book.find(params[:id])
   end
 end
