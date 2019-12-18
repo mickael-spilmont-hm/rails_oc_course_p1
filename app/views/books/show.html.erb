@@ -4,7 +4,7 @@
   <input type="text" name="title" />
   <input type="submit" value="Update book" />
 <% end %>
-
+</br>
 <%= form_tag "/books/#{@book.id}", method: "delete" do %>
   <input type="submit" value="Delete book" />
 <% end %>
