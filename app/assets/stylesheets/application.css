@@ -20,5 +20,6 @@ h1 {
 }
 #delete_buton {
   background-color: crimson;
+  border-color: rgb(243, 70, 105);
   color: white;
 }

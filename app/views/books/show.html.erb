@@ -1,7 +1,7 @@
 <h1><%= @book.title %></h1>
 
 <%= form_tag "/books/#{@book.id}", method: "patch" do %>
-  <input type="text" name="title" />
+  <input type="text" name="title" required="true" />
   <input type="submit" value="Update book" />
 <% end %>
 </br>
