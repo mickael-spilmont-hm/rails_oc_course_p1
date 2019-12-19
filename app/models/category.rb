@@ -1,2 +1,3 @@
-class Category < ApplicationRecord #::base ?
+class Category < ApplicationRecord #::base
+  has_many :book
 end

@@ -2,6 +2,11 @@
 
 <%= form_tag "/books/#{@book.id}", method: "patch" do %>
   <input type="text" name="title" required="true" />
+  <select name="category_id">
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
   <input type="submit" value="Update book" />
 <% end %>
 </br>
