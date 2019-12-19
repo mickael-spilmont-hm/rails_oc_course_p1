@@ -9,6 +9,9 @@
   </select>
   <input type="submit" value="Update book" />
 <% end %>
+
+<p><%= @book.errors[:title].first %></p>
+
 </br>
 <%= form_tag "/books/#{@book.id}", method: "delete" do %>
   <input type="submit" value="Delete book" id="delete_buton"/>

@@ -10,8 +10,13 @@ class BooksController < ApplicationController
   end
 
   def update
-    Book.find(params[:id]).update title: params[:title], category_id: params[:category_id]
-    redirect_to "/#{@id}"
+    @book = Book.find(params[:id])
+    @categories = Category.all
+    if @book.update title: params[:title], category_id:[:category_id]
+      redirect_to "/#{@id}"
+    else
+      render 'show'
+    end
   end
 
   def delete
