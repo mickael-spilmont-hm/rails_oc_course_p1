@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  # get 'pages#home'
+  # get 'contact' => 'pages#contact'
 
-  get 'contact' => 'pages#contact'
-
-  get 'books' => 'books#index'
+  root 'books#index'
   post 'books' => 'books#new'
 
   get 'books/:id' => 'books#show'
