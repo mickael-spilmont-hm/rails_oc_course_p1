@@ -8,4 +8,6 @@ class Book < ActiveRecord::Base
   validates :title, uniqueness: {
     message: "Title already exist"
   }
+
+  scope :sf, -> { where(category_id: 1) }
 end

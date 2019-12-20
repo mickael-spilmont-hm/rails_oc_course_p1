@@ -1,7 +1,7 @@
 <h1><%= @book.title %></h1>
 
 <%= form_tag "/books/#{@book.id}", method: "patch" do %>
-  <input type="text" name="title" required="true" />
+  <input type="text" name="title" />
   <select name="category_id">
     <% @categories.each do |category| %>
       <option value="<%= category.id %>"><%= category.name %></option>
@@ -12,7 +12,6 @@
 
 <p><%= @book.errors[:title].first %></p>
 
-</br>
 <%= form_tag "/books/#{@book.id}", method: "delete" do %>
   <input type="submit" value="Delete book" id="delete_buton"/>
 <% end %>
