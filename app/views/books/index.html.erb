@@ -12,14 +12,6 @@
 
 <ul>
   <% @books.each do |book| %>
-    <li><a href="/books/<%= book.id %>">
-
-    <% if book.category %>
-      <%= book.title %> (<%= book.category.name %>)
-    <% else %>
-      <%= book.title %>
-    <% end %>
-
-    </a></li>
+    <li><%= book_link(book) %></li>
   <% end %>
 </ul>
